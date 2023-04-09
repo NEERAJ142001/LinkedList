@@ -48,6 +48,16 @@ public class linkedList_Basic {
     }
     public void insertInMiddle(int position,String data)
     {
+        if(position==1)
+        {
+            addFirst(data);
+            return;
+        }
+        if(head.next==null)
+        {
+            addLast(data);
+            return;
+        }
         Node temp=head;
         int count=1;
         while(count<position-1)
